@@ -564,7 +564,7 @@ Now you can use:
 FROM myapp:restored
 RUN echo "customized from exported image"
 ```
-
+The docker export and docker import process is primarily useful for creating snapshots of a running container’s filesystem and restoring or transferring it into a new image. It can serve as a disaster recovery technique to back up the current state of a container and later restore it when needed. However, it’s important to remember that this approach doesn't capture all of Docker’s metadata, so it's most useful when you only need the filesystem and not the complete configuration of the container.
 ---
 
 ### Option 3: Use `dive` or `docker image inspect`
